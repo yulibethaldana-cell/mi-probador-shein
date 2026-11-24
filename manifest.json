@@ -1,0 +1,14 @@
+{
+  "name": "Mi Probador SHEIN",
+  "short_name": "Probador SHEIN",
+  "description": "Prueba virtualmente ropa con FASHN AI.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fff9fc",
+  "theme_color": "#d95f91",
+  "icons": [
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

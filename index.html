@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#d95f91">
+  <meta name="description" content="Mi Probador SHEIN: prueba ropa virtualmente con FASHN AI.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>Mi Probador SHEIN</title>
+</head>
+<body>
+  <header class="top">
+    <div class="brandmark">✿</div>
+    <div><h1>Mi Probador SHEIN</h1><p>Tu estilo, a tu manera</p></div>
+  </header>
+  <main>
+    <section class="intro">
+      <span class="tag">PROBADOR VIRTUAL CON IA</span>
+      <h2>¡Prueba un look nuevo!</h2>
+      <p>Sube una foto de la persona y otra de la prenda que quieras probar.</p>
+    </section>
+
+    <section class="access-box" aria-label="Acceso privado">
+      <label for="accessCode">Código privado de tu probador</label>
+      <input id="accessCode" type="password" autocomplete="off" placeholder="Escribe el código configurado en Netlify">
+      <small>Este código lo configuras en Netlify. No es tu clave de FASHN.</small>
+    </section>
+
+    <section class="uploads">
+      <label class="upload-card" for="personPhoto">
+        <span class="symbol">♡</span><strong>Foto de la persona</strong>
+        <small>De frente y con buena iluminación</small>
+        <img id="personPreview" alt="Vista previa de la foto de la persona" hidden>
+        <span class="choose">Elegir foto</span>
+        <input id="personPhoto" type="file" accept="image/jpeg,image/png,image/webp">
+      </label>
+      <label class="upload-card" for="garmentPhoto">
+        <span class="symbol">♧</span><strong>Prenda SHEIN</strong>
+        <small>Procura que se vea completa y nítida</small>
+        <img id="garmentPreview" alt="Vista previa de la prenda" hidden>
+        <span class="choose">Elegir prenda</span>
+        <input id="garmentPhoto" type="file" accept="image/jpeg,image/png,image/webp">
+      </label>
+    </section>
+
+    <button id="tryButton" class="primary" disabled>✨ Probar mi conjunto</button>
+    <p id="status" class="status" role="status" aria-live="polite">Escribe tu código privado y elige las dos fotografías.</p>
+
+    <section id="result" class="result" hidden>
+      <h3>¡Tu conjunto está listo!</h3>
+      <p>Este es el resultado generado por FASHN AI.</p>
+      <img id="resultImage" class="generated-image" alt="Resultado del probador virtual">
+      <a id="downloadResult" class="download" download="mi-probador-shein.jpg">Guardar imagen</a>
+    </section>
+
+    <button id="resetButton" class="secondary" type="button">Borrar fotos</button>
+    <p class="privacy">Al generar, las dos fotos se envían a FASHN AI para procesarlas. Usa solo fotos tuyas o de personas que hayan dado permiso. No subas imágenes íntimas ni compartas tu código privado.</p>
+    <p class="note">La generación requiere una clave API de FASHN configurada en Netlify y consume créditos de esa cuenta. El proyecto no contiene ni muestra esa clave.</p>
+  </main>
+  <footer>Mi Probador SHEIN · Conexión preparada para FASHN AI</footer>
+  <script src="app.js"></script>
+</body>
+</html>
